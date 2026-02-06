@@ -1,0 +1,486 @@
+/* --- VARIÁVEIS E RESET --- */
+:root {
+    --primary: #FF6600; /* Laranja FMG */
+    --primary-dark: #cc5200;
+    --secondary: #1a1a1a; /* Preto FMG */
+    --text-body: #555555;
+    --text-heading: #222222;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-body);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-heading);
+    font-weight: 700;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: var(--primary-dark); }
+
+.btn-outline { border: 2px solid white; color: white; margin-left: 10px; }
+.btn-outline:hover { background: white; color: var(--secondary); }
+
+.btn-sm {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+.btn-sm:hover { color: var(--secondary); }
+
+/* --- TOP BAR --- */
+.top-bar {
+    background-color: var(--secondary);
+    color: #ccc;
+    font-size: 0.85rem;
+    padding: 10px 0;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-info span { margin-right: 20px; }
+.top-info i { margin-right: 5px; color: var(--primary); }
+
+.top-social a { margin-left: 15px; color: #ccc; }
+.top-social a:hover { color: var(--primary); }
+
+.btn-login {
+    background: var(--primary);
+    color: white !important;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* --- HEADER --- */
+header {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.logo img { height: 70px; } /* Ajuste fino para o logo FMG2 */
+
+.nav-menu { display: flex; gap: 30px; }
+
+.nav-menu a {
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary);
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.nav-menu a:hover, .nav-menu a.active { color: var(--primary); }
+
+/* Hambúrguer Mobile */
+#menu-toggle, .menu-icon { display: none; }
+
+/* --- HERO SECTION --- */
+.hero {
+    background: url('assets/polo.jpeg') no-repeat center center/cover;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero .badge {
+    background: var(--primary);
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* --- INFO CARDS (Flutuantes) --- */
+.info-cards {
+    margin-top: -60px; /* Efeito flutuante sobre o hero */
+    position: relative;
+    z-index: 3;
+    padding-bottom: 60px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-item {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s;
+    border-bottom: 4px solid transparent;
+}
+
+.card-item:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid var(--primary);
+}
+
+.card-item i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.card-item h3 { margin-bottom: 15px; font-size: 1.3rem; }
+
+/* Destaque para o card do meio ou específico */
+.card-item.highlight { background: var(--secondary); color: white; }
+.card-item.highlight h3 { color: white; }
+.card-item.highlight i { color: var(--primary); }
+
+/* --- SOBRE --- */
+.about-section { padding: 80px 0; background: var(--light-bg); }
+
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-text { flex: 1; }
+.about-img { flex: 1; }
+
+.section-subtitle {
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.mec-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary);
+}
+
+.mec-qr { width: 80px; margin-right: 20px; }
+
+.link-arrow {
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+/* --- CURSOS --- */
+.courses-section { padding: 80px 0; }
+.divider { width: 60px; height: 4px; background: var(--primary); margin: 15px auto 0; }
+.text-center { text-align: center; margin-bottom: 60px; }
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.course-box {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    border: 1px solid #eee;
+}
+
+.course-box:hover { box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--primary); }
+
+.course-img {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.course-content { padding: 25px; }
+.course-content h3 { font-size: 1.2rem; margin-bottom: 10px; }
+.course-content p { font-size: 0.9rem; margin-bottom: 20px; color: #666; }
+
+/* --- CTA --- */
+.cta-section {
+    background: var(--primary);
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+.cta-section h2 { color: white; margin-bottom: 10px; }
+.cta-section .btn-white {
+    background: white;
+    color: var(--primary);
+    margin-top: 20px;
+}
+.cta-section .btn-white:hover { background: var(--secondary); color: white; }
+
+/* --- FOOTER --- */
+footer { background: #111; color: #aaa; padding-top: 70px; }
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #222;
+}
+
+.footer-col h3 { color: white; margin-bottom: 25px; font-size: 1.2rem; }
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; height: 40px;
+    background: #222;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.social-links a:hover { background: var(--primary); color: white; }
+
+.footer-col ul li { margin-bottom: 12px; }
+.footer-col ul li a:hover { color: var(--primary); padding-left: 5px; }
+
+.contact-list li { display: flex; gap: 15px; margin-bottom: 20px; }
+.contact-list i { color: var(--primary); margin-top: 5px; }
+
+.footer-bottom {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    .top-bar { display: none; }
+    .nav-menu {
+        position: absolute;
+        top: 90px; left: 0; width: 100%;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+    .nav-menu li { border-bottom: 1px solid #eee; }
+    .nav-menu a { display: block; padding: 15px 20px; }
+    
+    #menu-toggle:checked ~ .nav-menu { max-height: 300px; }
+    .menu-icon { display: block; font-size: 1.5rem; cursor: pointer; color: var(--primary); }
+
+    .hero h1 { font-size: 2.2rem; }
+    .card-grid { grid-template-columns: 1fr; }
+    .about-wrapper { flex-direction: column; }
+    
+    .info-cards { margin-top: 30px; }
+}
+
+/* --- ADIÇÕES E REFINAMENTOS PARA EAD --- */
+
+/* Tags nos Cards Flutuantes */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.status-badge.ead {
+    background-color: #e3f2fd; /* Azul bem claro */
+    color: #0d47a1; /* Azul escuro */
+}
+
+.status-badge.semi {
+    background-color: #fff3e0; /* Laranja bem claro */
+    color: #e65100; /* Laranja escuro */
+}
+
+/* Seção de Destaque Pedagogia (Estilo Row Flex) */
+.pedagogia-highlight {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.row-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.col-text { flex: 1; }
+.col-img { flex: 1; }
+
+.col-img img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.badge-container {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.semi-tag { background: var(--primary); color: white; }
+.time-tag { background: #eee; color: #555; }
+
+.check-list { margin: 25px 0; }
+.check-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.check-list i { color: var(--primary); }
+
+/* Badges dentro dos Cards de Curso */
+.course-img { position: relative; } /* Necessário para posicionar a badge */
+
+.course-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.course-badge.ead { background: #28a745; } /* Verde para EAD 100% */
+
+.course-content .category {
+    display: block;
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.btn-link {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    display: inline-block;
+}
+.btn-link:hover { text-decoration: underline; }
+
+/* Responsivo para a seção Pedagogia */
+@media (max-width: 768px) {
+    .row-flex { flex-direction: column-reverse; }
+}
