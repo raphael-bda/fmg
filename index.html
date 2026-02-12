@@ -9,6 +9,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,15 +17,15 @@
     <div class="top-bar">
         <div class="container">
             <div class="top-info">
-                <span><i class="fas fa-phone-alt"></i> (11)  94567-5184 </span>
+                <span><i class="fas fa-phone-alt"></i> (11) 94567-5184 </span>
                 <span><i class="fas fa-university"></i> FMG - Qualidade no Ensino</span>
             </div>
             <div class="top-social">
-                <a href="https://www.ircsystem.com.br/w2/aluno/login.php" class="top-link"><i class="fas fa-user-graduate"></i> Aluno</a>
-                <a href="https://www.ircsystem.com.br/w2/login/index.php" class="top-link"><i class="fas fa-chalkboard-teacher"></i> Professor</a>
-                <a href="https://www.ircsystem.com.br/w2/login/index.php" class="top-link"><i class="fas fa-user-tie"></i> Funcionário</a>
+                <a href="https://www.ircsystem.com.br/w2/aluno/login.php" target="_blank" class="top-link"><i class="fas fa-user-graduate"></i> Aluno</a>
+                <a href="https://www.ircsystem.com.br/w2/login/index.php" target="_blank" class="top-link"><i class="fas fa-chalkboard-teacher"></i> Professor</a>
+                <a href="https://www.ircsystem.com.br/w2/login/index.php" target="_blank" class="top-link"><i class="fas fa-user-tie"></i> Funcionário</a>
                 <a href="https://acadsystem.com.br/consulta/consultapublica.php" target="_blank" class="top-link"><i class="fas fa-search"></i> Consulta Pública</a>
-                <a href="validador.faculdademogiana.edu.br" class="top-link"><i class="fas fa-certificate"></i> Consultar Diploma Digital</a>
+                <a href="http://validador.faculdademogiana.edu.br" target="_blank" class="top-link"><i class="fas fa-certificate"></i> Consultar Diploma Digital</a>
             </div>
         </div>
     </div>
@@ -58,7 +59,7 @@
             <p>Especialize-se com quem é referência em <strong>Pedagogia e Educação Especial</strong>. Cursos presenciais, Semi-presenciais e EAD com qualidade garantida.</p>
             <div class="hero-btns">
                 <a href="#cursos" class="btn btn-primary">Ver Cursos</a>
-                <a href="https://wa.me/5511945675184" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Inscrição via WhatsApp</a>
+                <a href="https://wa.me/5511945675184" target="_blank" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Inscrição via WhatsApp</a>
             </div>
         </div>
     </section>
@@ -92,8 +93,8 @@
                     <div class="course-content">
                         <span class="category">Licenciatura</span>
                         <h3>Pedagogia</h3>
-                        <p>Formação completa para atuar na education infantil e gestão escolar com excelência.</p>
-                        <a href="https://wa.me/5511945675184?text=Olá,%20vim%20pelo%20site%20da%20FMG,%20gostaria%20de%20mais%20informações%20sobre%20o%20curso%20de%20Pedagogia" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+                        <p>Formação completa para atuar na educação infantil e gestão escolar com excelência.</p>
+                        <a href="https://wa.me/5511945675184" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -107,76 +108,87 @@
                 <h2 class="section-title">Especializações FMG</h2>
                 <div class="divider"></div>
             </div>
-            <div class="courses-grid">
-                <div class="course-box">
-                    <div class="course-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcP7YL_5vU_4lnPvZEVtCeixea33V-E4zNZA&s');">
-                        <span class="course-badge ead">EAD / Presencial</span>
-                    </div>
-                    <div class="course-content">
-                        <span class="category">Educação e Saúde</span>
-                        <h3>Neuropsicopedagogia</h3>
-                        <p>Compreenda o funcionamento do cérebro e os processos de aprendizagem.</p>
-                        <a href="https://wa.me/5511945675184?text=Olá,%20vim%20pelo%20site%20da%20FMG,%20gostaria%20de%20mais%20informações%20sobre%20o%20curso%20de%20Neuropsicopedagogia" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
 
-                <div class="course-box">
-                    <div class="course-img" style="background-image: url('https://blog.highfivebilingual.com.br/wp-content/uploads/2022/06/alfabetizacao-e-letramento.jpg');">
-                        <span class="course-badge ead">EAD</span>
+            <div class="swiper pos-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="course-box">
+                            <div class="course-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcP7YL_5vU_4lnPvZEVtCeixea33V-E4zNZA&s');">
+                                <span class="course-badge ead">EAD / Presencial</span>
+                            </div>
+                            <div class="course-content">
+                                <span class="category">Educação e Saúde</span>
+                                <h3>Neuropsicopedagogia</h3>
+                                <p>Compreenda o funcionamento do cérebro e os processos de aprendizagem.</p>
+                                <a href="https://wa.me/5511945675184" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="course-content">
-                        <span class="category">Alfabetização</span>
-                        <h3>Alfabetização e Letramento</h3>
-                        <p>Metodologias essenciais para o ensino da leitura e escrita.</p>
-                        <a href="https://wa.me/5511945675184?text=Olá,%20vim%20pelo%20site%20da%20FMG,%20gostaria%20de%20mais%20informações%20sobre%20o%20curso%20de%20Alfabetização%20e%20Letramento" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
 
-                <div class="course-box">
-                    <div class="course-img" style="background-image: url('https://www.unimestre.com/wp-content/uploads/2021/07/vantagens-de-gestao-educacional.jpg');">
-                        <span class="course-badge ead">EAD</span>
+                    <div class="swiper-slide">
+                        <div class="course-box">
+                            <div class="course-img" style="background-image: url('https://blog.highfivebilingual.com.br/wp-content/uploads/2022/06/alfabetizacao-e-letramento.jpg');">
+                                <span class="course-badge ead">EAD</span>
+                            </div>
+                            <div class="course-content">
+                                <span class="category">Alfabetização</span>
+                                <h3>Alfabetização e Letramento</h3>
+                                <p>Metodologias essenciais para o ensino da leitura e escrita.</p>
+                                <a href="https://wa.me/5511945675184" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="course-content">
-                        <span class="category">Gestão</span>
-                        <h3>Gestão Escolar</h3>
-                        <p>Desenvolva competências de liderança e administração educacional.</p>
-                        <a href="https://wa.me/5511945675184?text=Olá,%20vim%20pelo%20site%20da%20FMG,%20gostaria%20de%20mais%20informações%20sobre%20o%20curso%20de%20Gestão%20Escolar" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
 
-                <div class="course-box">
-                    <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=500&q=60');">
-                        <span class="course-badge">Lato Sensu</span>
+                    <div class="swiper-slide">
+                        <div class="course-box">
+                            <div class="course-img" style="background-image: url('https://www.unimestre.com/wp-content/uploads/2021/07/vantagens-de-gestao-educacional.jpg');">
+                                <span class="course-badge ead">EAD</span>
+                            </div>
+                            <div class="course-content">
+                                <span class="category">Gestão</span>
+                                <h3>Gestão Escolar</h3>
+                                <p>Desenvolva competências de liderança e administração educacional.</p>
+                                <a href="https://wa.me/5511945675184" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="course-content">
-                        <span class="category">Educação</span>
-                        <h3>Ludoterapia</h3>
-                        <p>A arte de educar e tratar através do brincar no contexto escolar.</p>
-                        <a href="https://wa.me/5511945675184?text=Olá,%20vim%20pelo%20site%20da%20FMG,%20gostaria%20de%20mais%20informações%20sobre%20o%20curso%20de%20Ludoterapia" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+
+                    <div class="swiper-slide">
+                        <div class="course-box">
+                            <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=500&q=60');">
+                                <span class="course-badge ead">EAD</span>
+                            </div>
+                            <div class="course-content">
+                                <span class="category">Educação</span>
+                                <h3>Ludoterapia</h3>
+                                <p>A arte de educar e tratar através do brincar no contexto escolar.</p>
+                                <a href="https://wa.me/5511945675184" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="course-box">
+                            <div class="course-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgbnuCquBSTbOh2fUHPvy6mfVwetAQLWpH4A&s');">
+                                <span class="course-badge ead">EAD / Presencial</span>
+                            </div>
+                            <div class="course-content">
+                                <span class="category">Educação Especial</span>
+                                <h3>Ênfase em TEA (Autismo)</h3>
+                                <p>Práticas inclusivas e estratégias para o Transtorno do Espectro Autista.</p>
+                                <a href="https://wa.me/5511945675184" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="course-box">
-                    <div class="course-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgbnuCquBSTbOh2fUHPvy6mfVwetAQLWpH4A&s');">
-                        <span class="course-badge ead">EAD / Presencial</span>
-                    </div>
-                    <div class="course-content">
-                        <span class="category">Educação Especial</span>
-                        <h3>Ênfase em TEA (Autismo)</h3>
-                        <p>Práticas inclusivas e estratégias para o Transtorno do Espectro Autista.</p>
-                        <a href="https://wa.me/5511945675184?text=Olá,%20vim%20pelo%20site%20da%20FMG,%20gostaria%20de%20mais%20informações%20sobre%20o%20curso%20de%20Ênfase%20em%20TEA%20(Autismo)" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="course-box">
-                    <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=500&q=60');">
-                        <span class="course-badge ead">EAD</span>
-                    </div>
-                    <div class="course-content">
-                        <span class="category">Docência</span>
-                        <h3>Ensino Superior e EAD</h3>
-                        <p>Prepare-se para atuar na docência universitária e tutoria digital.</p>
-                        <a href="https://wa.me/5511945675184?text=Olá,%20vim%20pelo%20site%20da%20FMG,%20gostaria%20de%20mais%20informações%20sobre%20o%20curso%20de%20Ensino%20Superior%20e%20EAD" target="_blank" class="btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="more-courses-cta">
+                <p>Quer saber mais sobre outros cursos?</p>
+                <a href="https://wa.me/5511945675184" target="_blank" class="btn btn-primary">Saiba Mais</a>
             </div>
         </div>
     </section>
@@ -191,11 +203,11 @@
                 <h3>Polo São Paulo (SP)</h3>
                 <ul class="contact-list">
                     <li><i class="fas fa-map-marker-alt"></i> Rua Angá 938, Vila Formosa, São Paulo - SP</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Endereço alternativo: Av. Padre Jaime, 2600 - Mogi Guaçu/SP</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Padre Jaime, 2600 - Mogi Guaçu/SP</li>
                     <li><i class="fas fa-phone"></i> (11) 94567-5184</li>
                 </ul>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.584762086438!2d-46.54928628502256!3d-23.54743898468984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e634e7d455d%3A0x6285223789025062!2sR.%20Ang%C3%A1%2C%20938%20-%20Vila%20Formosa%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003360-000!5e0!3m2!1spt-BR!2sbr!4v1625680000000!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4087127977463!2d-46.5492!3d-23.553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzEwLjgiUyA0NsKwMzInNTcuMSJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -206,9 +218,23 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/5511945675184?text=Olá! Vim pelo site da FMG e gostaria de mais informações." class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5511945675184" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.pos-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+    </script>
 </body>
 </html>

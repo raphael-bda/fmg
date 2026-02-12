@@ -600,3 +600,51 @@ footer { background: #111; color: #aaa; padding-top: 70px; }
         gap: 10px;
     }
 }
+
+/* Adicione estas linhas ao final do seu style.css */
+
+/* Ajustes para o Carrossel Swiper */
+.pos-swiper {
+    padding: 20px 0 50px 0 !important;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--primary);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary) !important;
+}
+
+/* Estilo do botão de chamada extra */
+.more-courses-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background: var(--light-bg);
+    border-radius: 10px;
+}
+
+.more-courses-cta p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+/* Correção da Badge de Ludoterapia (EAD Verde) */
+.course-badge.ead {
+    background-color: #28a745 !important; /* Verde padrão EAD */
+    color: white !important;
+}
+
+/* Ajuste geral para links externos não mudarem de cor após clique */
+a[target="_blank"]:visited {
+    color: inherit;
+}
