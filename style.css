@@ -9,24 +9,24 @@
 
 /* Estilo específico para a seção MEC/QR Code */
 .mec-validation {
-    padding: 40px 0;
-    margin-top: -50px;
+    padding: 70px 0;
+    margin-top: -10px;
     position: relative;
-    z-index: 10;
+    z-index: 20;
 }
 
 .mec-box {
     background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 100px;
+    border-radius: 50px;
+    box-shadow: 0 10px 100px rgba(0,0,0,0.1);
     border-left: 6px solid var(--primary);
 }
 
 .mec-content {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 150px;
 }
 
 
@@ -278,7 +278,7 @@ header {
     border-left: 5px solid var(--primary);
 }
 
-.mec-qr { width: 80px; margin-right: 20px; }
+.mec-qr { width: 150px; margin-right: 20px; }
 
 .link-arrow {
     font-size: 0.9rem;
@@ -514,4 +514,60 @@ footer { background: #111; color: #aaa; padding-top: 70px; }
 /* Responsivo para a seção Pedagogia */
 @media (max-width: 768px) {
     .row-flex { flex-direction: column-reverse; }
+}
+
+/* --- ADIÇÕES NOVAS --- */
+
+/* Botão Flutuante WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Ajustes para Centralizar Grids com Poucos Itens */
+.center-grid {
+    justify-content: center;
+}
+
+/* Badge Semi-presencial */
+.course-badge.semi {
+    background-color: #ff9800; /* Laranja */
+    color: white;
+}
+
+/* Responsivo Botão WhatsApp */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
 }
