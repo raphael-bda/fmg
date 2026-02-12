@@ -162,7 +162,7 @@ header {
 
 .mec-box {
     background: white;
-    padding: 60px; /* Reduzi levemente o padding para ajustar melhor */
+    padding: 60px;
     border-radius: 30px;
     box-shadow: 0 10px 60px rgba(0,0,0,0.1);
     border-left: 6px solid var(--primary);
@@ -171,7 +171,7 @@ header {
 .mec-content {
     display: flex;
     align-items: center;
-    gap: 50px; /* Gap ajustado */
+    gap: 50px;
     justify-content: center;
 }
 
@@ -201,7 +201,7 @@ header {
     justify-content: center;
     width: 100%;
     font-size: 2.2rem;
-    flex-wrap: wrap; /* Permite quebrar linha se precisar */
+    flex-wrap: wrap;
 }
 
 .section-subtitle {
@@ -247,11 +247,11 @@ header {
 
 .course-box:hover { box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--primary); }
 
-/* --- ALTERAÇÃO SOLICITADA 1: Imagem mais completa --- */
+/* Ajuste imagem completa */
 .course-img {
-    height: 220px; /* Aumentado de 180px para mostrar mais imagem */
+    height: 220px;
     background-size: cover;
-    background-position: top center; /* Foca nos rostos/topo e não corta o centro */
+    background-position: top center;
     position: relative;
     width: 100%;
 }
@@ -290,19 +290,19 @@ header {
 .course-content h3 { font-size: 1.3rem; margin-bottom: 10px; }
 .course-content p { font-size: 0.95rem; margin-bottom: 20px; color: #666; flex-grow: 1; }
 
-/* --- ALTERAÇÃO SOLICITADA 2: Botão Branco/Sólido --- */
+/* Botão Saiba Mais Sólido */
 .btn-link {
-    display: block; /* Ocupa largura ou se comporta como bloco */
+    display: block;
     width: fit-content;
-    background-color: var(--primary); /* Fundo Azul */
-    color: white !important; /* Fonte Branca */
+    background-color: var(--primary);
+    color: white !important;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: 700;
     font-size: 0.9rem;
     text-align: center;
     transition: background-color 0.3s ease;
-    margin-top: auto; /* Empurra para o final do card */
+    margin-top: auto;
 }
 
 .btn-link:hover {
@@ -313,7 +313,7 @@ header {
 
 /* --- SWIPER AJUSTES --- */
 .pos-swiper { padding: 20px 5px 50px 5px !important; }
-.swiper-slide { height: auto; display: flex; } /* Altura automática para cards iguais */
+.swiper-slide { height: auto; display: flex; }
 .swiper-button-next, .swiper-button-prev { color: var(--primary); }
 .swiper-pagination-bullet-active { background: var(--primary) !important; }
 
@@ -375,10 +375,8 @@ footer { background: #111; color: #aaa; padding-top: 70px; }
 
 /* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 768px) {
-    /* Barra superior some no mobile para economizar espaço */
     .top-bar { display: none; }
     
-    /* Menu Hamburguer */
     .nav-menu {
         position: absolute;
         top: 90px; left: 0; width: 100%;
@@ -396,20 +394,16 @@ footer { background: #111; color: #aaa; padding-top: 70px; }
     #menu-toggle:checked ~ .nav-menu { max-height: 350px; }
     .menu-icon { display: block; font-size: 1.5rem; cursor: pointer; color: var(--primary); }
 
-    /* Hero Textos Maiores */
     .hero h1 { font-size: 2rem; }
-    .hero-content { padding: 0 10px; } /* Evita texto colado na borda */
+    .hero-content { padding: 0 10px; }
     .hero-btns { display: flex; flex-direction: column; gap: 10px; }
     .btn-outline { margin-left: 0; }
 
-    /* Ajuste MEC Mobile */
     .mec-box { padding: 40px 20px; }
     .mec-content { flex-direction: column; text-align: center; gap: 30px; }
     
-    /* Grid vira coluna única */
     .courses-grid { grid-template-columns: 1fr; }
     
-    /* WhatsApp menor no mobile */
     .whatsapp-float {
         width: 50px;
         height: 50px;
