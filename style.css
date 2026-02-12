@@ -5,33 +5,7 @@
     --text-body: #444444;
     --light-bg: #f0f4f8;
     --white: #ffffff;
-}
-
-/* Estilo específico para a seção MEC/QR Code */
-.mec-validation {
-    padding: 70px 0;
-    margin-top: -10px;
-    position: relative;
-    z-index: 20;
-}
-
-.mec-box {
-    background: white;
-    padding: 100px;
-    border-radius: 50px;
-    box-shadow: 0 10px 100px rgba(0,0,0,0.1);
-    border-left: 6px solid var(--primary);
-}
-
-.mec-content {
-    display: flex;
-    align-items: center;
-    gap: 150px;
-}
-
-
-@media (max-width: 768px) {
-    .mec-content { flex-direction: column; text-align: center; }
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 * {
@@ -45,6 +19,7 @@ body {
     color: var(--text-body);
     line-height: 1.6;
     background-color: var(--white);
+    -webkit-font-smoothing: antialiased; /* Melhora renderização de fonte */
 }
 
 h1, h2, h3, h4 {
@@ -62,6 +37,7 @@ ul { list-style: none; }
     padding: 0 20px;
 }
 
+/* --- BOTÕES GERAIS --- */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -77,14 +53,6 @@ ul { list-style: none; }
 
 .btn-outline { border: 2px solid white; color: white; margin-left: 10px; }
 .btn-outline:hover { background: white; color: var(--secondary); }
-
-.btn-sm {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--primary);
-    text-transform: uppercase;
-}
-.btn-sm:hover { color: var(--secondary); }
 
 /* --- TOP BAR --- */
 .top-bar {
@@ -106,14 +74,6 @@ ul { list-style: none; }
 .top-social a { margin-left: 15px; color: #ccc; }
 .top-social a:hover { color: var(--primary); }
 
-.btn-login {
-    background: var(--primary);
-    color: white !important;
-    padding: 5px 15px;
-    border-radius: 3px;
-    font-weight: bold;
-}
-
 /* --- HEADER --- */
 header {
     background: var(--white);
@@ -130,7 +90,7 @@ header {
     height: 90px;
 }
 
-.logo img { height: 70px; } /* Ajuste fino para o logo FMG2 */
+.logo img { height: 70px; }
 
 .nav-menu { display: flex; gap: 30px; }
 
@@ -144,7 +104,6 @@ header {
 
 .nav-menu a:hover, .nav-menu a.active { color: var(--primary); }
 
-/* Hambúrguer Mobile */
 #menu-toggle, .menu-icon { display: none; }
 
 /* --- HERO SECTION --- */
@@ -193,92 +152,32 @@ header {
     opacity: 0.9;
 }
 
-/* --- INFO CARDS (Flutuantes) --- */
-.info-cards {
-    margin-top: -60px; /* Efeito flutuante sobre o hero */
+/* --- MEC VALIDATION --- */
+.mec-validation {
+    padding: 70px 0;
+    margin-top: -10px;
     position: relative;
-    z-index: 3;
-    padding-bottom: 60px;
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.card-item {
-    background: var(--white);
-    padding: 40px 30px;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    text-align: center;
-    transition: transform 0.3s;
-    border-bottom: 4px solid transparent;
-}
-
-.card-item:hover {
-    transform: translateY(-10px);
-    border-bottom: 4px solid var(--primary);
-}
-
-.card-item i {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 20px;
-}
-
-.card-item h3 { margin-bottom: 15px; font-size: 1.3rem; }
-
-/* Destaque para o card do meio ou específico */
-.card-item.highlight { background: var(--secondary); color: white; }
-.card-item.highlight h3 { color: white; }
-.card-item.highlight i { color: var(--primary); }
-
-/* --- SOBRE --- */
-.about-section { padding: 80px 0; background: var(--light-bg); }
-
-.about-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
-
-.about-text { flex: 1; }
-.about-img { flex: 1; }
-
-.section-subtitle {
-    color: var(--primary);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.about-img img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 20;
 }
 
 .mec-box {
-    display: flex;
-    align-items: center;
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 30px;
-    box-shadow: var(--shadow);
-    border-left: 5px solid var(--primary);
+    padding: 60px; /* Reduzi levemente o padding para ajustar melhor */
+    border-radius: 30px;
+    box-shadow: 0 10px 60px rgba(0,0,0,0.1);
+    border-left: 6px solid var(--primary);
 }
 
-.mec-qr { width: 150px; margin-right: 20px; }
+.mec-content {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Gap ajustado */
+    justify-content: center;
+}
+
+.mec-qr { width: 150px; }
+
+.mec-text h3 { margin-bottom: 10px; color: var(--primary); }
 
 .link-arrow {
     font-size: 0.9rem;
@@ -287,19 +186,52 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
-/* --- CURSOS --- */
+/* --- CURSOS & CARDS --- */
 .courses-section { padding: 80px 0; }
 .divider { width: 60px; height: 4px; background: var(--primary); margin: 15px auto 0; }
 .text-center { text-align: center; margin-bottom: 60px; }
 
+.section-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    font-size: 2.2rem;
+    flex-wrap: wrap; /* Permite quebrar linha se precisar */
+}
+
+.section-subtitle {
+    display: block;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.badge-inline {
+    background-color: #ff9800;
+    color: white;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
 .courses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
+
+.center-grid { justify-content: center; }
 
 .course-box {
     background: white;
@@ -308,175 +240,21 @@ header {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: 0.3s;
     border: 1px solid #eee;
+    height: 100%; /* Garante altura uniforme */
+    display: flex;
+    flex-direction: column;
 }
 
 .course-box:hover { box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--primary); }
 
+/* --- ALTERAÇÃO SOLICITADA 1: Imagem mais completa --- */
 .course-img {
-    height: 180px;
+    height: 220px; /* Aumentado de 180px para mostrar mais imagem */
     background-size: cover;
-    background-position: center;
-}
-
-.course-content { padding: 25px; }
-.course-content h3 { font-size: 1.2rem; margin-bottom: 10px; }
-.course-content p { font-size: 0.9rem; margin-bottom: 20px; color: #666; }
-
-/* --- CTA --- */
-.cta-section {
-    background: var(--primary);
-    padding: 60px 0;
-    text-align: center;
-    color: white;
-}
-.cta-section h2 { color: white; margin-bottom: 10px; }
-.cta-section .btn-white {
-    background: white;
-    color: var(--primary);
-    margin-top: 20px;
-}
-.cta-section .btn-white:hover { background: var(--secondary); color: white; }
-
-/* --- FOOTER --- */
-footer { background: #111; color: #aaa; padding-top: 70px; }
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    padding-bottom: 50px;
-    border-bottom: 1px solid #222;
-}
-
-.footer-col h3 { color: white; margin-bottom: 25px; font-size: 1.2rem; }
-
-.social-links a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px; height: 40px;
-    background: #222;
-    border-radius: 50%;
-    margin-right: 10px;
-    transition: 0.3s;
-}
-.social-links a:hover { background: var(--primary); color: white; }
-
-.footer-col ul li { margin-bottom: 12px; }
-.footer-col ul li a:hover { color: var(--primary); padding-left: 5px; }
-
-.contact-list li { display: flex; gap: 15px; margin-bottom: 20px; }
-.contact-list i { color: var(--primary); margin-top: 5px; }
-
-.map-container {
-    margin-top: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.footer-bottom {
-    padding: 25px 0;
-    text-align: center;
-    font-size: 0.85rem;
-}
-
-/* --- RESPONSIVO --- */
-@media (max-width: 768px) {
-    .top-bar { display: none; }
-    .nav-menu {
-        position: absolute;
-        top: 90px; left: 0; width: 100%;
-        background: white;
-        flex-direction: column;
-        gap: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: 0.3s;
-        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-    }
-    .nav-menu li { border-bottom: 1px solid #eee; }
-    .nav-menu a { display: block; padding: 15px 20px; }
-    
-    #menu-toggle:checked ~ .nav-menu { max-height: 300px; }
-    .menu-icon { display: block; font-size: 1.5rem; cursor: pointer; color: var(--primary); }
-
-    .hero h1 { font-size: 2.2rem; }
-    .card-grid { grid-template-columns: 1fr; }
-    .about-wrapper { flex-direction: column; }
-    
-    .info-cards { margin-top: 30px; }
-}
-
-/* --- ADIÇÕES E REFINAMENTOS PARA EAD --- */
-
-/* Tags nos Cards Flutuantes */
-.status-badge {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.status-badge.ead {
-    background-color: #e3f2fd; /* Azul bem claro */
-    color: #0d47a1; /* Azul escuro */
-}
-
-.status-badge.semi {
-    background-color: #fff3e0; /* Laranja bem claro */
-    color: #e65100; /* Laranja escuro */
-}
-
-/* Seção de Destaque Pedagogia (Estilo Row Flex) */
-.pedagogia-highlight {
-    padding: 80px 0;
-    background-color: white;
-}
-
-.row-flex {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.col-text { flex: 1; }
-.col-img { flex: 1; }
-
-.col-img img {
+    background-position: top center; /* Foca nos rostos/topo e não corta o centro */
+    position: relative;
     width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
-
-.badge-container {
-    margin: 20px 0;
-    display: flex;
-    gap: 10px;
-}
-
-.tag {
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.semi-tag { background: var(--primary); color: white; }
-.time-tag { background: #eee; color: #555; }
-
-.check-list { margin: 25px 0; }
-.check-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-.check-list i { color: var(--primary); }
-
-/* Badges dentro dos Cards de Curso */
-.course-img { position: relative; } /* Necessário para posicionar a badge */
 
 .course-badge {
     position: absolute;
@@ -491,7 +269,14 @@ footer { background: #111; color: #aaa; padding-top: 70px; }
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.course-badge.ead { background: #28a745; } /* Verde para EAD 100% */
+.course-badge.ead { background: #28a745 !important; }
+
+.course-content { 
+    padding: 25px; 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
 
 .course-content .category {
     display: block;
@@ -502,23 +287,65 @@ footer { background: #111; color: #aaa; padding-top: 70px; }
     margin-bottom: 5px;
 }
 
+.course-content h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.course-content p { font-size: 0.95rem; margin-bottom: 20px; color: #666; flex-grow: 1; }
+
+/* --- ALTERAÇÃO SOLICITADA 2: Botão Branco/Sólido --- */
 .btn-link {
-    color: var(--primary);
+    display: block; /* Ocupa largura ou se comporta como bloco */
+    width: fit-content;
+    background-color: var(--primary); /* Fundo Azul */
+    color: white !important; /* Fonte Branca */
+    padding: 10px 20px;
+    border-radius: 5px;
     font-weight: 700;
     font-size: 0.9rem;
-    margin-top: 15px;
-    display: inline-block;
-}
-.btn-link:hover { text-decoration: underline; }
-
-/* Responsivo para a seção Pedagogia */
-@media (max-width: 768px) {
-    .row-flex { flex-direction: column-reverse; }
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Empurra para o final do card */
 }
 
-/* --- ADIÇÕES NOVAS --- */
+.btn-link:hover {
+    background-color: var(--primary-dark);
+    text-decoration: none;
+    color: white;
+}
 
-/* Botão Flutuante WhatsApp */
+/* --- SWIPER AJUSTES --- */
+.pos-swiper { padding: 20px 5px 50px 5px !important; }
+.swiper-slide { height: auto; display: flex; } /* Altura automática para cards iguais */
+.swiper-button-next, .swiper-button-prev { color: var(--primary); }
+.swiper-pagination-bullet-active { background: var(--primary) !important; }
+
+/* CTA Extra */
+.more-courses-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background: var(--light-bg);
+    border-radius: 10px;
+}
+.more-courses-cta p { font-weight: 600; margin-bottom: 15px; }
+
+/* --- FOOTER --- */
+footer { background: #111; color: #aaa; padding-top: 70px; }
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #222;
+}
+
+.footer-col h3 { color: white; margin-bottom: 25px; font-size: 1.2rem; }
+
+.contact-list li { display: flex; gap: 15px; margin-bottom: 20px; }
+.contact-list i { color: var(--primary); margin-top: 5px; }
+
+.footer-bottom { padding: 25px 0; text-align: center; font-size: 0.85rem; }
+
+/* --- WHATSAPP FLOAT --- */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -527,7 +354,7 @@ footer { background: #111; color: #aaa; padding-top: 70px; }
     right: 40px;
     background-color: #25d366;
     color: #FFF;
-    border-radius: 50px;
+    border-radius: 50%;
     text-align: center;
     font-size: 30px;
     box-shadow: 2px 2px 3px #999;
@@ -538,11 +365,7 @@ footer { background: #111; color: #aaa; padding-top: 70px; }
     transition: all 0.3s ease;
     animation: pulse 2s infinite;
 }
-
-.whatsapp-float:hover {
-    background-color: #128c7e;
-    transform: scale(1.1);
-}
+.whatsapp-float:hover { background-color: #128c7e; transform: scale(1.1); }
 
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
@@ -550,101 +373,48 @@ footer { background: #111; color: #aaa; padding-top: 70px; }
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-/* Ajustes para Centralizar Grids com Poucos Itens */
-.center-grid {
-    justify-content: center;
-}
-
-/* Badge Semi-presencial */
-.course-badge.semi {
-    background-color: #ff9800; /* Laranja */
-    color: white;
-}
-
-/* Responsivo Botão WhatsApp */
+/* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 768px) {
+    /* Barra superior some no mobile para economizar espaço */
+    .top-bar { display: none; }
+    
+    /* Menu Hamburguer */
+    .nav-menu {
+        position: absolute;
+        top: 90px; left: 0; width: 100%;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+    .nav-menu li { border-bottom: 1px solid #eee; }
+    .nav-menu a { display: block; padding: 15px 20px; }
+    
+    #menu-toggle:checked ~ .nav-menu { max-height: 350px; }
+    .menu-icon { display: block; font-size: 1.5rem; cursor: pointer; color: var(--primary); }
+
+    /* Hero Textos Maiores */
+    .hero h1 { font-size: 2rem; }
+    .hero-content { padding: 0 10px; } /* Evita texto colado na borda */
+    .hero-btns { display: flex; flex-direction: column; gap: 10px; }
+    .btn-outline { margin-left: 0; }
+
+    /* Ajuste MEC Mobile */
+    .mec-box { padding: 40px 20px; }
+    .mec-content { flex-direction: column; text-align: center; gap: 30px; }
+    
+    /* Grid vira coluna única */
+    .courses-grid { grid-template-columns: 1fr; }
+    
+    /* WhatsApp menor no mobile */
     .whatsapp-float {
         width: 50px;
         height: 50px;
         bottom: 20px;
         right: 20px;
-        font-size: 25px;
+        font-size: 24px;
     }
-}
-
-/* Estilo para o selo ao lado do título da Graduação */
-.section-title {
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-    justify-content: center;
-    width: 100%;
-}
-
-.badge-inline {
-    background-color: #ff9800; /* Laranja padrão do site */
-    color: white;
-    font-size: 0.85rem;
-    padding: 6px 14px;
-    border-radius: 4px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Ajuste para mobile para não quebrar o layout */
-@media (max-width: 768px) {
-    .section-title {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-/* Adicione estas linhas ao final do seu style.css */
-
-/* Ajustes para o Carrossel Swiper */
-.pos-swiper {
-    padding: 20px 0 50px 0 !important;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-}
-
-.swiper-button-next, .swiper-button-prev {
-    color: var(--primary);
-}
-
-.swiper-pagination-bullet-active {
-    background: var(--primary) !important;
-}
-
-/* Estilo do botão de chamada extra */
-.more-courses-cta {
-    text-align: center;
-    margin-top: 40px;
-    padding: 30px;
-    background: var(--light-bg);
-    border-radius: 10px;
-}
-
-.more-courses-cta p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: var(--secondary);
-    margin-bottom: 15px;
-}
-
-/* Correção da Badge de Ludoterapia (EAD Verde) */
-.course-badge.ead {
-    background-color: #28a745 !important; /* Verde padrão EAD */
-    color: white !important;
-}
-
-/* Ajuste geral para links externos não mudarem de cor após clique */
-a[target="_blank"]:visited {
-    color: inherit;
 }
